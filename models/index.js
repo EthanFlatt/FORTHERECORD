@@ -1,14 +1,14 @@
 const mongoose = require('mongoose')
 const bandSchema = require('./band')
 const albumSchema = require('./album')
-const songSchema = require('./song')
+const genreSchema = require('./genre')
 
 const Band = mongoose.model('Band', bandSchema)
 const Album = mongoose.model('Album', albumSchema)
-const Song = mongoose.model('Song', songSchema)
+const Genre = mongoose.model('Genre', genreSchema)
 
 module.exports = {
     Band,
     Album,
-    Song
+    Genre
 }
