@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+#topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+#forTheRecord {
+    font-weight: 900;
+    font-size: 3em;
+    font-style: none
+}
+    
+#topnav {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    margin-top: -20px
+}
+#topnav li{
+    display: inline
+}
+
+#content {
+    display: grid;
+    grid-template-rows: repeat(2, 25px);
+    text-align: center;
+    white-space: nowrap;
+}
+
+#search input {
+    width: 210px;
+    margin: 0 5px 0 5px
+}
+
+#searchButton {
+    max-width: fit-content;
+}
+
+#genrenav li{
+    display: inline;
+    margin: 0 20px 0 20px;
+    text-decoration: none
+}
+
+a:visited {
+    text-decoration: none
+}
+

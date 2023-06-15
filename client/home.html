@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta searchQuery="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="home.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -12,34 +12,36 @@
 <body>
 
     <header>
-        <div id="forTheRecord">
-            ForTheRecord
+        <div id="topBar">
+            <div id="forTheRecord">
+                ForTheRecord
+            </div>
+            <nav id="topnav">
+                <ul>
+                    <li>Sign up</li>
+                    <li>|</li>
+                    <li>Log in</li>
+                    <li>|</li>
+                    <li><i class="icon-cart"></i> icon-cart</li>
+                </ul>
+            </nav>
         </div>
-        <nav id="topnav">
-            <ul>
-                <li>Sign up</li>
-                <li>|</li>
-                <li>Log in</li>
-                <li>|</li>
-                <li><i class="icon-cart"></i> icon-cart</li>
-            </ul>
-        </nav>
     </header>
 
     <div id="content">
         <div id="search">
-            <input type="text"  value="" placeholder="Search by record, band, song, or genre"  id="searchBar">
+            <input type="text"  value="" placeholder="Search by record, band, or genre"  id="searchBar">
             <input type="button"  value="Click here" id="searchButton">
         </div>
         <ul id="genrenav">
-            <li>See all</li>
-            <li>pop</li>
-            <li>jazz</li>
-            <li>metal</li>
-            <li>R&B</li>
-            <li>Hip Hop</li>
-            <li>Rap</li>
-            <li>Rock</li>
+            <li><a href="searchQuery.html">See all</a></li>
+            <li><a href="searchQuery.html?search=pop">pop</a></li>
+            <li><a href="searchQuery.html?search=jazz">jazz</a></li>
+            <li><a href="searchQuery.html?search=metal">metal</a></li>
+            <li><a href="searchQuery.html?search=R&B">R&B</a></li>
+            <li><a href="searchQuery.html?search=hip%20hop">Hip hop</a></li>
+            <li><a href="searchQuery.html?search=rap">Rap</a></li>
+            <li><a href="searchQuery.html?search=rock">Rock</a></li>
         </ul>
     </div>
     

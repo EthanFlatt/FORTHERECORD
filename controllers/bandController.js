@@ -1,24 +1,35 @@
 const { Band } = require('../models')
-const bandSchema = require('../models/band')
 
 const getBands = async (req, res) => {
     const bands = await Band.find()
     res.json(bands)
 }
 
-const getBandById = async (req, res) => {
+const getBandByName = async (req, res) => {
+    try{
+        const { name } = req.params
+        const band  = await Band.findOne({name})
+        res.json(band)
+    } catch (e) {
+        console.log(e)
+        res.send('No records found.')
+    } 
+}
+
+const deleteBand = async (req, res) => {
     try{
         const { id } = req.params
-        const band = await Band.findById(id)
-        if(!band) throw Error('No records found.')
-        res.json(band)
+        const band = await Band.findByIdAndDelete(id)
+        if(!band) throw Error('Not found.')
+        res.status(200).json(band)
         } catch (e) {
             console.log(e)
-            res.send('No records found.')
+            res.send('Not deleted.')
         } 
-}
+    }
 
 module.exports = {
     getBands,
-    getBandById
+    getBandByName,
+    deleteBand
 }

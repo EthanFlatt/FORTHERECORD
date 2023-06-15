@@ -2,10 +2,10 @@ const Router = require('express').Router()
 
 const bandRouter = require('./bandRouter')
 const albumRouter = require('./albumRouter')
-const songRouter = require('./songRouter')
+const genreRouter = require('./genreRouter')
 
 Router.use('/bands', bandRouter)
 Router.use('/albums', albumRouter)
-Router.use('/songs', songRouter)
+Router.use('/genres', genreRouter)
 
 module.exports = Router

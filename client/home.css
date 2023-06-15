@@ -1,15 +1,30 @@
 * {
     box-sizing: border-box;
 }
+body {
+    background: url('https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/technology/home-technology/film-and-tv/transferring-vinyl-to-digital-shutterstock-222981331.jpg');
+    background-size: cover;
+    color: white;
+}
+
+#topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
 
 #forTheRecord {
-    font-size: 3em
+    font-weight: 900;
+    font-size: 3em;
+    font-style: none
 }
     
 #topnav {
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
+    font-size: 1.5em;
+    margin-top: -20px
 }
 #topnav li{
     display: inline
@@ -20,11 +35,11 @@
     grid-template-rows: repeat(2, 25px);
     text-align: center;
     white-space: nowrap;
-    margin-top: 30vh
+    margin-top: 35vh
 }
 
 #search input {
-    width: 240px;
+    width: 210px;
     margin: 0 5px 0 5px
 }
 
@@ -34,5 +49,11 @@
 
 #genrenav li{
     display: inline;
-    margin: 0 20px 0 20px
+    margin: 0 20px 0 20px;
+    font-size: 1.5em;
+    text-decoration: none
+}
+
+#genrenav li:visited {
+    text-decoration: none
 }

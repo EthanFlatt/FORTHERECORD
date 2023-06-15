@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="searchQuery.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="searchQuery.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div id="topBar">
+            <div id="forTheRecord">
+                ForTheRecord
+            </div>
+    
+            <div id="content">
+                <div id="search">
+                    <input type="text"  value="" placeholder="Search by record, band, or genre"  id="searchBar">
+                    <input type="button"  value="Click here" id="searchButton">
+                </div>
+                <ul id="genrenav">
+                    <li><a href="searchQuery.html">See all</a></li>
+                    <li><a href="searchQuery.html?search=pop">pop</a></li>
+                    <li><a href="searchQuery.html?search=jazz">jazz</a></li>
+                    <li><a href="searchQuery.html?search=metal">metal</a></li>
+                    <li><a href="searchQuery.html?search=R&B">R&B</a></li>
+                    <li><a href="searchQuery.html?search=hip%20hop">Hip hop</a></li>
+                    <li><a href="searchQuery.html?search=rap">Rap</a></li>
+                    <li><a href="searchQuery.html?search=rock">Rock</a></li>
+                        </ul>
+            </div>
+
+            <nav id="topnav">
+                <ul>
+                    <li>Sign up</li>
+                    <li>|</li>
+                    <li>Log in</li>
+                    <li>|</li>
+                    <li><i class="icon-cart"></i> icon-cart</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div id="albumDisplay">
+        <h3 id="albumBand"></h3>
+        <h2 id="albumName"> <span><h2 id='albumPrice'></h2></span></h2>
+        <img id="albumImage">
+        <button id="albumAddToCart">Add to cart</button>
+    </div>
+
+    
+
+</body>
+</html>

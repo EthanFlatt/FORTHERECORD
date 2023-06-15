@@ -1,10 +1,9 @@
 const { Schema } = require('mongoose')
-const { getMaxListeners } = require('./band')
 
-const Song = new Schema(
+const Genre= new Schema(
     {
-        type: {type: String, required: true},
-        album: {type: Schema.Types.ObjectId, ref: 'Album'}
+        name: {type: String, required: true},
+        albums: [{type: Schema.Types.ObjectId, ref: 'Album', required: true}]
     },
     {timestamps: true}
 )

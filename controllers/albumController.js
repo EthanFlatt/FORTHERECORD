@@ -1,16 +1,36 @@
-const { Album } = require('../models')
-const albumSchema = require('../models/album')
+const { Album, Band, Genre } = require('../models')
 
 const getAlbums = async (req, res) => {
-    const albums = await Album.find()
-    res.json(albums)
+    const { search } = req.query
+    let albums
+
+    try {
+        if (search) {
+            const albumQueryConditions = []
+            
+            const genre  = await Genre.findOne({name: search})
+            if (genre) albumQueryConditions.push({_id: {$in: genre.albums}})
+            
+            const band  = await Band.findOne({name: search})
+            if (band) albumQueryConditions.push({band: band._id})
+
+            albumQueryConditions.push({name: search})
+
+            albums = await Album.find({$or: albumQueryConditions})
+        } else {
+            albums = await Album.find({})
+        }
+        res.json(albums)
+    } catch (e) {
+        console.log(e)
+        res.send('An error happened')
+    }
 }
 
-const getAlbumById = async (req, res) => {
+const getAlbumByName = async (req, res) => {
     try{
-        const { id } = req.params
-        const album = await Album.findById(id)
-        if(!album) throw Error('No records found.')
+        const { name } = req.params
+        const album = await Album.findOne({name})
         res.json(album)
         } catch (e) {
             console.log(e)
@@ -18,7 +38,21 @@ const getAlbumById = async (req, res) => {
         } 
 }
 
+const deleteAlbum = async (req, res) => {
+    try{
+        const { id } = req.params
+        const album = await Album.findByIdAndDelete(id)
+        if(!album) throw Error('Not found.')
+        res.status(200).json(album)
+        } catch (e) {
+            console.log(e)
+            res.send('Not deleted.')
+        } 
+    }
+
+
 module.exports = {
     getAlbums,
-    getAlbumById
+    getAlbumByName,
+    deleteAlbum,
 }
