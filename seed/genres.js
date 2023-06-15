@@ -72,6 +72,7 @@ const main = async () => {
     const okComputer = await Album.findOne({name: 'OK Computer'})
     const comeAwayWithMe = await Album.findOne({name: 'Come Away with Me'})
     const theSunstirade = await Album.findOne({name: 'The Suns Tirade'})
+    const soundAndColor = await Album.findOne({name: 'Sound and Color'})
 
     const genres = [
         {
@@ -80,8 +81,7 @@ const main = async () => {
         },
         {
             name: 'rock',
-            albums: [mtvUnplugged._id, goodNewsforPeopleWhoLoveBadNews._id, weWereDeadBeforetheShipEvenSank._id,
-            gorillaz._id, demonDays._id, stillBrazy._id, brothers._id, theBlackParade._id, roomOnFire._id, hotFuss._id, sgtPeppersLonelyHeartsClubBand._id, theColourAndTheShape._id, flyingMicrotonalBanana._id, outlandosDamour._id, afriqueVictime._id, saladDays._id, songsAboutJane._id, conTodoElMundo._id, theStoryOfSonnyBoySlim._id, supernatural._id, eyeInTheSKy._id, okComputer._id]
+            albums: [mtvUnplugged._id, goodNewsforPeopleWhoLoveBadNews._id, weWereDeadBeforetheShipEvenSank._id, gorillaz._id, demonDays._id, stillBrazy._id, brothers._id, theBlackParade._id, roomOnFire._id, hotFuss._id, sgtPeppersLonelyHeartsClubBand._id, theColourAndTheShape._id, flyingMicrotonalBanana._id, outlandosDamour._id, afriqueVictime._id, saladDays._id, songsAboutJane._id, conTodoElMundo._id, theStoryOfSonnyBoySlim._id, supernatural._id, eyeInTheSKy._id, okComputer._id]
         },
         {
             name: 'pop',
@@ -97,15 +97,14 @@ const main = async () => {
         },
         {
             name: 'soul',
-            albums: [backToBlack._id,theMiseducationofLaurynHill._id,
-            SongsInAMinor._id, diamondLife._id, blackPumas._id, justAsIAm._id]
+            albums: [backToBlack._id,theMiseducationofLaurynHill._id, SongsInAMinor._id, diamondLife._id, blackPumas._id, justAsIAm._id, soundAndColor._id]
         },
         {
             name: 'disco',
             albums: [theBestOfEarthWindAndFireVolumeOne._id, discovery._id]
         },
         {
-            name: 'r&b',
+            name: 'r and b',
             albums: [blonde._id, channelOrange._id,  isolation._id, awakenMyLove._id, theBestOfEarthWindAndFireVolumeOne._id]
         },
         {
@@ -115,7 +114,8 @@ const main = async () => {
         {
             name: 'etc.',
             albums: [live._id, elwan._id, nightflightToVenus._id]
-        }
+        },
+
     ]
     await Genre.deleteMany({})
     await Genre.insertMany(genres)
@@ -124,7 +124,7 @@ const main = async () => {
 
 const run = async () => {
     await main()
-    db.close
+    db.close()
 }
 
 run()

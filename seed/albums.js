@@ -20,8 +20,8 @@ const main = async () => {
     const yg = await Band.findOne({name: 'YG'})
     const amyWinehouse = await Band.findOne({name: 'Amy Winehouse'})
     const weezer = await Band.findOne({name: 'Weezer'})
-    const blackKeys = await Band.findOne({name: 'blackKeys'})
-    const myChemicalRomance = await Band.findOne({name: 'myChemicalRomance'})
+    const blackKeys = await Band.findOne({name: 'Black Keys'})
+    const myChemicalRomance = await Band.findOne({name: 'My Chemical Romance'})
     const theStrokes = await Band.findOne({name: 'The Strokes'})
     const theKillers = await Band.findOne({name: 'The Killers'})
     const theBeatles = await Band.findOne({name: 'The Beatles'})
@@ -52,7 +52,7 @@ const main = async () => {
     const daftPunk = await Band.findOne({name: 'Daft Punk'})
     const musicalYouth = await Band.findOne({name: 'Musical Youth'})
     const blackPumas = await Band.findOne({name: 'Black Pumas'})
-    const theRoots = await Band.findOne({name: 'AlabamaShakes'})
+    const theRoots = await Band.findOne({name: 'The Roots'})
     const garyClarkJr = await Band.findOne({name: 'Gary Clark Jr.'})
     const dojaCat = await Band.findOne({name: 'Doja Cat'})
     const sublime = await Band.findOne({name: 'Sublime'})
@@ -63,11 +63,11 @@ const main = async () => {
     const billWithers = await Band.findOne({name: 'Bill Withers'})
     const tupac = await Band.findOne({name: 'Tupac'})
     const theNotoriousBIG = await Band.findOne({name: 'The Notorious B.I.G.'})
-    const theAlanParsonsProject = await Band.findOne({name: 'TheAlanParsonsProject'})
+    const theAlanParsonsProject = await Band.findOne({name: 'The Alan Parsons Project'})
     const radiohead = await Band.findOne({name: 'Radiohead'})
     const norahJones = await Band.findOne({name: 'Norah Jones'})
     const isaiahRashad = await Band.findOne({name: 'Isaiah Rashad'})
-    const gulch = await Band.findOne({name: 'Gulch'})
+    const alabamaShakes = await Band.findOne({bame: 'Alabama Shakes'})
 
     const albums = [
 
@@ -475,6 +475,12 @@ const main = async () => {
             band: isaiahRashad._id,
             priceInDollars: 25,
             image: 'https://upload.wikimedia.org/wikipedia/en/thumb/0/00/TheSunsTirade.jpeg/220px-TheSunsTirade.jpeg'
+        },
+        {
+            name: 'Sound and Color',
+            band: alabamaShakes._id,
+            priceInDollars: 25,
+            image: 'https://upload.wikimedia.org/wikipedia/en/2/2d/Alabama_Shakes_-_Sound_%26_Color_album_cover.jpg'
         }
         
     ]
@@ -485,7 +491,7 @@ const main = async () => {
 
 const run = async () => {
     await main()
-    db.close
+    db.close()
 }
 
 run()

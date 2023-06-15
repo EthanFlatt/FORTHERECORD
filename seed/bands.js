@@ -39,7 +39,7 @@ const main = async () => {
             name: 'The White Stripes'
         },
         {
-            name: 'kendrick Lamar'
+            name: 'Kendrick Lamar'
         },
         {
             name: 'YG'
@@ -102,7 +102,7 @@ const main = async () => {
             name: 'Bad Brains'
         },
         {
-            name: 'The HU'
+            name: 'The Hu'
         },
         {
             name: 'Mdou Moctar'
@@ -180,7 +180,7 @@ const main = async () => {
             name: 'Tupac'
         },
         {
-            name: 'The Notorious B.I.G'
+            name: 'The Notorious B.I.G.'
         },
         {
             name: 'The Alan Parsons Project'
@@ -195,7 +195,7 @@ const main = async () => {
             name: 'Isaiah Rashad'
         },
         {
-            name: 'Gulch'
+            name: 'Alabama Shakes'
         }
 
     ]
@@ -206,7 +206,7 @@ const main = async () => {
 
 const run = async () => {
     await main()
-    db.close
+    db.close()
 }
 
 run()
