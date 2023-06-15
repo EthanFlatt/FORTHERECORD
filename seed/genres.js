@@ -103,7 +103,7 @@ const main = async () => {
         {
             name: 'disco',
             albums: [theBestOfEarthWindAndFireVolumeOne._id, discovery._id]
-        }
+        },
         {
             name: 'r&b',
             albums: [blonde._id, channelOrange._id,  isolation._id, awakenMyLove._id, theBestOfEarthWindAndFireVolumeOne._id]
@@ -111,7 +111,7 @@ const main = async () => {
         {
             name: 'reggae',
             albums: [legend._id, theYouthOfToday._id]
-        }
+        },
         {
             name: 'etc.',
             albums: [live._id, elwan._id, nightflightToVenus._id]
