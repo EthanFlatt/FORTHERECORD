@@ -85,14 +85,14 @@ a:visited {
     text-decoration: none
 }
 
-.albumDisplay {
-    margin-top: 75px;
+.gridContainer {
     display: grid;
-    grid-template-columns: repeat (4, 200px)
+    grid-template-columns: repeat(4, 600px);
+    grid-auto-rows: 600px;
 }
 
-.albumName {
-    margin-bottom: 
+.albumDisplay {
+    margin-top: 75px;
 }
 
 .albumPrice {
