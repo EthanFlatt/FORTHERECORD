@@ -13,8 +13,8 @@ const main = async () => {
     const violator = await Album.findOne({name: 'Violator'})
     const goodNewsforPeopleWhoLoveBadNews = await Album.findOne({name: 'Good News for People Who Love Bad News'})
     const weWereDeadBeforetheShipEvenSank = await Album.findOne({name: 'We Were Dead Before the Ship Even Sank'})
-    const theCollegeDropout = await Album.findOne({name: 'The College Droput'})
-    const lateRegistration = await Album.findOne({name: 'Late Regestration'})
+    const theCollegeDropout = await Album.findOne({name: 'The College Dropout'})
+    const lateRegistration = await Album.findOne({name: 'Late Registration'})
     const graduation = await Album.findOne({name: 'Graduation'})
     const abbaGold = await Album.findOne({name: 'ABBA Gold'})
     const gorillaz = await Album.findOne({name: 'Gorillaz'})
@@ -30,8 +30,8 @@ const main = async () => {
     const roomOnFire= await Album.findOne({name: 'Room on Fire'})
     const hotFuss = await Album.findOne({name: 'Hot Fuss'})
     const sgtPeppersLonelyHeartsClubBand = await Album.findOne({name: "Sgt. Pepper's Lonely Hearts Club band"})
-    const theColourAndTheShape= await Album.findOne({name: 'The Coulour and the Shape'})
-    const flyingMicrotonalBanana = await Album.findOne({name: 'Flying Microtonal banana'})
+    const theColourAndTheShape= await Album.findOne({name: 'The Colour and the Shape'})
+    const flyingMicrotonalBanana = await Album.findOne({name: 'Flying Microtonal Banana'})
     const outlandosDamour = await Album.findOne({name: "Outlandos d'amour"})
     const live = await Album.findOne({name: 'Live!'})
     const SongsInAMinor = await Album.findOne({name: 'Songs in A Minor'})
@@ -77,11 +77,11 @@ const main = async () => {
     const genres = [
         {
             name: 'hip hop',
-            albums: [flowerBoy._id, theCollegeDropout._id, lateRegistration._id, graduation._id, toPimpaButterfly._id, theScore._id, theLowEndTheory._id, mmFood._id, stankonia._id, thingsFallApart._id, lifeAfterDeath._id, allEyezOnMe._id, theSunstirade._id]
+            albums: [flowerBoy._id, theCollegeDropout._id, lateRegistration._id, graduation._id, toPimpaButterfly._id, theScore._id, theLowEndTheory._id, mmFood._id, stankonia._id, thingsFallApart._id, lifeAfterDeath._id, allEyezOnMe._id, theSunstirade._id, stillBrazy._id]
         },
         {
             name: 'rock',
-            albums: [mtvUnplugged._id, goodNewsforPeopleWhoLoveBadNews._id, weWereDeadBeforetheShipEvenSank._id, gorillaz._id, demonDays._id, stillBrazy._id, brothers._id, theBlackParade._id, roomOnFire._id, hotFuss._id, sgtPeppersLonelyHeartsClubBand._id, theColourAndTheShape._id, flyingMicrotonalBanana._id, outlandosDamour._id, afriqueVictime._id, saladDays._id, songsAboutJane._id, conTodoElMundo._id, theStoryOfSonnyBoySlim._id, supernatural._id, eyeInTheSKy._id, okComputer._id]
+            albums: [mtvUnplugged._id, goodNewsforPeopleWhoLoveBadNews._id, weWereDeadBeforetheShipEvenSank._id, gorillaz._id, demonDays._id, brothers._id, theBlackParade._id, roomOnFire._id, hotFuss._id, sgtPeppersLonelyHeartsClubBand._id, theColourAndTheShape._id, flyingMicrotonalBanana._id, outlandosDamour._id, afriqueVictime._id, saladDays._id, songsAboutJane._id, conTodoElMundo._id, theStoryOfSonnyBoySlim._id, supernatural._id, eyeInTheSKy._id, okComputer._id]
         },
         {
             name: 'pop',

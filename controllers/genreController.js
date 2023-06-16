@@ -1,7 +1,7 @@
 const { Genre } = require('../models')
 
 const getGenres = async (req, res) => {
-    const genres = await Genre.find()
+    const genres = await Genre.find().populate('albums')
     res.json(genres)
 }
 

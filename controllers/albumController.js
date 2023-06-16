@@ -16,9 +16,9 @@ const getAlbums = async (req, res) => {
 
             albumQueryConditions.push({name: search})
 
-            albums = await Album.find({$or: albumQueryConditions})
+            albums = await Album.find({$or: albumQueryConditions}).populate('band')
         } else {
-            albums = await Album.find({})
+            albums = await Album.find({}).populate('band')
         }
         res.json(albums)
     } catch (e) {
@@ -30,7 +30,7 @@ const getAlbums = async (req, res) => {
 const getAlbumByName = async (req, res) => {
     try{
         const { name } = req.params
-        const album = await Album.findOne({name})
+        const album = await Album.findOne({_id:name})
         res.json(album)
         } catch (e) {
             console.log(e)

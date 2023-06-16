@@ -67,7 +67,7 @@ const main = async () => {
     const radiohead = await Band.findOne({name: 'Radiohead'})
     const norahJones = await Band.findOne({name: 'Norah Jones'})
     const isaiahRashad = await Band.findOne({name: 'Isaiah Rashad'})
-    const alabamaShakes = await Band.findOne({bame: 'Alabama Shakes'})
+    const alabamaShakes = await Band.findOne({name: 'Alabama Shakes'})
 
     const albums = [
 
@@ -327,19 +327,19 @@ const main = async () => {
             image: 'https://upload.wikimedia.org/wikipedia/en/1/10/Childish_Gambino_-_Awaken%2C_My_Love%21.png'
         },
         {
-            Name: 'Songs About Jane',
+            name: 'Songs About Jane',
             band: maroon5._id,
             priceInDollars: 25,
             image: 'https://upload.wikimedia.org/wikipedia/en/b/be/Maroon_5_-_Songs_About_Jane.png'
         },
         {
-            Name: 'Legend',
+            name: 'Legend',
             band: bobMarley._id,
             priceInDollars: 25,
             image: 'https://upload.wikimedia.org/wikipedia/en/c/c2/BobMarley-Legend.jpg'
         },
         {
-            Name: 'Mm..Food',
+            name: 'Mm..Food',
             band: mfDoom._id,
             priceInDollars: 20,
             image: 'https://upload.wikimedia.org/wikipedia/en/8/8a/Mmfood.jpg'
@@ -429,7 +429,7 @@ const main = async () => {
             image: 'https://upload.wikimedia.org/wikipedia/en/f/f5/Tears_for_Fears_Songs_from_the_Big_Chair.jpg'
         },
         {
-            name: 'Nighflight to Venus',
+            name: 'Nightflight to Venus',
             band: boneyM._id,
             priceInDollars: 30,
             image: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/86/Boney_M._-_Nightflight_To_Venus.jpg/220px-Boney_M._-_Nightflight_To_Venus.jpg'
