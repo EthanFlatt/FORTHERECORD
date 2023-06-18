@@ -50,9 +50,30 @@ const deleteAlbum = async (req, res) => {
         } 
     }
 
+const createAlbum = async (req, res) => {
+    try{
+        const album = await Album.create(req.body)
+        res.status(200).json(album)
+    }  catch (e) {
+        console.log(e)
+        res.send('Not created.')
+    }
+}
+
+const updateAlbum = async (req, res) => {
+    try{
+        const album = await Album.replaceOne({name: req.params.name}, req.body)
+        res.status(200).json(album)
+    } catch (e) {
+        console.log(e)
+        res.send('Not updated.')
+    }
+}
 
 module.exports = {
     getAlbums,
     getAlbumByName,
     deleteAlbum,
+    createAlbum,
+    updateAlbum
 }

@@ -43,8 +43,13 @@
     margin-right: 3px;
 }
 
-#topnav li{
+#topnav li {
     display: inline
+}
+
+#topnav a {
+    text-decoration: none;
+    color: black
 }
 
 #content {

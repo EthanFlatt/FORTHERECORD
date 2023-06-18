@@ -38,11 +38,19 @@ const getData = async (myParam) => {
 
    let albumsArray = foundData.data 
         albumsArray.forEach((album) => {
-        albumDisplay.innerHTML += `<h3 class='albumBand'>${album.band.name}</h3>
-        <h2 class='albumName'>${album.name}</h2>
-        <img class="albumImage" src = '${album.image}'>
-        <h2> <button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2>`
+        if (album.band === null) {
+            albumDisplay.innerHTML += `
+            <h2 class='albumName'>${album.name}</h2>
+            <img class="albumImage" src = '${album.image}'>
+            <h2><button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2>`
+        } else {
+            albumDisplay.innerHTML += `<h3 class='albumBand'>${album.band.name}</h3>
+            <h2 class='albumName'>${album.name}</h2>
+            <img class="albumImage" src = '${album.image}'>
+            <h2><button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2>`
+        }
       })  
+
    
 
    albumName.innerText = foundData.data[album].name
@@ -50,5 +58,10 @@ const getData = async (myParam) => {
    albumBand.innerText = foundData.data[album].band.name
    albumImage.src = foundData.data[album].image
 }
+
+
+// add event listener to button to run function so respective album can be added to cart
+// make function that takes respective album and adds it to cart
+// albumAddToCart.addEventListener('click', )
 
 
