@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('search'); 
-    document.getElementById('searchBar').value = myParam  
     getData(myParam)
-    searchBar.value = ''
     }, false);
 
 const searchBar = document.getElementById('searchBar')
@@ -40,14 +38,14 @@ const getData = async (myParam) => {
         albumsArray.forEach((album) => {
         if (album.band === null) {
             albumDisplay.innerHTML += `
-            <h2 class='albumName'>${album.name}</h2>
+            <div><h2 class='albumName'>${album.name}</h2>
             <img class="albumImage" src = '${album.image}'>
-            <h2><button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2>`
+            <h2><button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2> </div>`
         } else {
-            albumDisplay.innerHTML += `<h3 class='albumBand'>${album.band.name}</h3>
+            albumDisplay.innerHTML += `<div> <h3 class='albumBand'>${album.band.name}</h3>
             <h2 class='albumName'>${album.name}</h2>
             <img class="albumImage" src = '${album.image}'>
-            <h2><button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2>`
+            <h2><button class='albumAddToCart'>Add to cart</button> <span class='albumPrice'>$${album.priceInDollars}</span> </h2> </div>`
         }
       })  
 

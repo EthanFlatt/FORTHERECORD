@@ -44,11 +44,11 @@ const deleteAlbum = async (req, res) => {
         const album = await Album.findByIdAndDelete(id)
         if(!album) throw Error('Not found.')
         res.status(200).json(album)
-        } catch (e) {
-            console.log(e)
-            res.send('Not deleted.')
-        } 
-    }
+    } catch (e) {
+        console.log(e)
+        res.send('Not deleted.')
+     } 
+}
 
 const createAlbum = async (req, res) => {
     try{

@@ -90,9 +90,10 @@ a:visited {
     text-decoration: none
 }
 
-.gridContainer {
+.albumDisplay{
     display: grid;
-    grid-template-columns: repeat(4, 600px);
+    text-align: center;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: 600px;
 }
 
